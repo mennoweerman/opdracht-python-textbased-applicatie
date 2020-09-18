@@ -1,0 +1,60 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\menno> whoami
+laptop-fl1cbc2f\menno
+PS C:\Users\menno> ls
+
+
+    Directory: C:\Users\menno
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-r---         2-9-2020     10:17                3D Objects
+d-r---         2-9-2020     10:17                Contacts
+d-----         8-7-2020     19:15                Documents
+d-r---         7-9-2020     08:54                Downloads
+d-r---         2-9-2020     10:17                Favorites
+d-r---         2-9-2020     10:17                Links
+d-r---         2-9-2020     10:17                Music
+dar--l         7-9-2020     13:18                OneDrive
+d-r---         2-9-2020     10:17                Saved Games
+d-r---         2-9-2020     10:17                Searches
+d-r---         2-9-2020     10:17                Videos
+-a----         7-9-2020     08:26             53 .git-for-windows-updater
+
+
+PS C:\Users\menno> ls *.txt
+PS C:\Users\menno> ls a*
+PS C:\Users\menno> md newDirectory
+
+
+    Directory: C:\Users\menno
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         7-9-2020     14:42                newDirectory
+
+
+PS C:\Users\menno> cd newDirectory
+PS C:\Users\menno\newDirectory> cd . .
+Set-Location : A positional parameter cannot be found that accepts argument '.'.
+At line:1 char:1
++ cd . .
++ ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Location], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\menno\newDirectory> cd ~
+PS C:\Users\menno> rm newDirectory
+PS C:\Users\menno> rm - Force
+Remove-Item : A positional parameter cannot be found that accepts argument 'Force'.
+At line:1 char:1
++ rm - Force
++ ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Remove-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
